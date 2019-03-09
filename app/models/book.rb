@@ -1,6 +1,9 @@
 class Book < ApplicationRecord
         #связи belongs_to обязаны использовать единственное число модели
-   belongs_to :group
+   has_many :authors
+   has_many :groups
+
+   has_one :avatar
 
    has_attached_file :avatar, styles: {
     thumb: '100x100>',
@@ -10,4 +13,6 @@ class Book < ApplicationRecord
 
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+    validates :name, :description, presence: true
 end

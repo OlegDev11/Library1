@@ -19,8 +19,9 @@ gem 'twitter-bootstrap-rails'
 gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
 gem 'figaro'
-gem 'devise', git: "https://github.com/plataformatec/devise"
+gem 'simple_form'
 
+gem 'devise', git: "https://github.com/plataformatec/devise"
 gem 'activeadmin'
 
 group :development, :test do
