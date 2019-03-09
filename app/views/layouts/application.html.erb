@@ -12,6 +12,14 @@
   </head>
 
   <body>
+    <span class="p-2 text-dark"><%= link_to "Registration", new_user_registration_path %></span> or
+    <span class="p-2 text-dark"><%= link_to "Sing in", new_user_session_path %></span> |
+    <span class="p-2 text-dark"><%= link_to "Sing out", destroy_user_session_path, :method => :delete %></span>
+
+
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>

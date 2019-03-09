@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-   belongs_to :author     #связи belongs_to обязаны использовать единственное число модели
+        #связи belongs_to обязаны использовать единственное число модели
    belongs_to :group
 
    has_attached_file :avatar, styles: {
