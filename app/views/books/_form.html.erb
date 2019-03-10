@@ -28,6 +28,7 @@
     <%= form.number_field :group_id %>
   </div>
 
+<% if current_user.present %>
   <div class="actions">
     <%= form.submit %>
   </div>

@@ -1,6 +1,5 @@
 ActiveAdmin.register Group do
 
   permit_params :name
-
-  actions :all, except: [:update, :destroy, :edit, :create]
+  actions :all, except: [:update, :create]
 end

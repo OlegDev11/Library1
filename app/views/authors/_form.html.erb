@@ -31,6 +31,7 @@
     <%= form.check_box :admin %>
   </div>
 
+<% if current_user.present %>
   <div class="actions">
     <%= form.submit %>
   </div>
