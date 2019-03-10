@@ -7,7 +7,7 @@
 
 <p>
   <strong>Avatar:</strong>
-<%= image_tag @book.avatar.url(:square) %>
+ <%= image_tag @book.avatar.url(:thumb) %> 
 </p>
 
 <p>
@@ -15,10 +15,4 @@
   <%= @book.description %>
 </p>
 
-<p>
-  <strong>Group:</strong>
-  <%= @book.group_id %>
-</p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
