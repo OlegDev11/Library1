@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_09_115301) do
+ActiveRecord::Schema.define(version: 2019_03_10_145245) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -41,22 +41,38 @@ ActiveRecord::Schema.define(version: 2019_03_09_115301) do
   create_table "authors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.integer "book_id"
     t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "authors_books", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_authors_books_on_author_id"
+    t.index ["book_id"], name: "index_authors_books_on_book_id"
+  end
+
   create_table "books", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar_file_name"
     t.string "avatar_content_type"
     t.bigint "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "books_groups", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_books_groups_on_book_id"
+    t.index ["group_id"], name: "index_books_groups_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
