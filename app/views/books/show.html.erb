@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Avatar:</strong>
- <%= image_tag @book.avatar.url(:thumb) %> 
+  <strong>Image:</strong>
+  <%= image_tag @book.avatar.url(:large), class: "img-show" if @book.avatar? %>   
 </p>
 
 <p>

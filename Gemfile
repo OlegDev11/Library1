@@ -16,10 +16,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 #Add gems
 gem 'twitter-bootstrap-rails'
-gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
 gem 'figaro'
 gem 'simple_form'
+
+#for image
+gem 'carrierwave'
+gem "mini_magick"
 
 gem 'devise', git: "https://github.com/plataformatec/devise"
 gem 'activeadmin'
