@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 
+gem 'dotenv-rails', groups: [:development, :test]
 #Standart gems
 gem 'rails', '~> 5.2.2'
 gem 'sqlite3', '~> 1.3', '< 1.4'
@@ -22,6 +23,7 @@ gem 'simple_form'
 
 #for image
 gem 'carrierwave'
+gem 'fog-aws', require: 'fog/aws'
 gem "mini_magick"
 
 gem 'devise', git: "https://github.com/plataformatec/devise"
