@@ -4,4 +4,14 @@ ActiveAdmin.register Author do
 
   #отключение методов
    actions :all
+
+   show do
+      attributes_table do
+         table_for author.books do
+            column "Books" do |book|
+            link_to book.name, [:admin, book]
+            end
+         end
+      end
+   end
 end

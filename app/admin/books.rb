@@ -8,7 +8,6 @@ ActiveAdmin.register Book do
      column "Authors" do |author|
        link_to author.name, [:admin, author]
      end
-
    end
     row :description
     row :name
