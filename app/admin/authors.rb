@@ -9,7 +9,7 @@ ActiveAdmin.register Author do
       attributes_table do
          table_for author.books do
             column "Books" do |book|
-            link_to book.name, [:admin, book]
+              link_to book.name, [:admin, book]
             end
          end
       end
