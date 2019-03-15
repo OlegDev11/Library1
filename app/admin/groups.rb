@@ -20,6 +20,8 @@ ActiveAdmin.register Group do
              book_form.input :name
            end
         end
-        f.button
-    end
+          f.actions do
+            f.action :submit, label: "Delete"
+          end
+        end
 end
