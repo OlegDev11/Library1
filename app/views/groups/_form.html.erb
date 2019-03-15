@@ -11,13 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
 
-<% if current_user.present %>
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <% if current_user.presence %>
+     <div class="actions">
+        <%= form.submit %>
+     </div>
+    <% end %>
 <% end %>
