@@ -6,7 +6,7 @@ ruby '2.6.1'
 gem 'dotenv-rails', groups: [:development, :test]
 #Standart gems
 gem 'rails', '~> 5.2.2'
-gem 'sqlite3', '~> 1.3', '< 1.4'
+
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -30,7 +30,12 @@ gem 'devise', git: "https://github.com/plataformatec/devise"
 gem 'activeadmin'
 
 group :development, :test do
+  gem 'sqlite3', '~> 1.3', '< 1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :production do
+  gem 'pg' 
 end
 
 group :development do
