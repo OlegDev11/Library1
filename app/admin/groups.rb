@@ -15,7 +15,7 @@ ActiveAdmin.register Group do
 
 
     form do |f|
-        f.inputs "edit/books" do
+        f.inputs "edit/group" do
            f.has_many :books, heading: false, allow_destroy: true,  new_record: false do |book_form|
              book_form.input :name
            end
