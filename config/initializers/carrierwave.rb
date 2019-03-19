@@ -1,6 +1,6 @@
-  if Rails.env.production?
+
 CarrierWave.configure do |config|
-  if Rails.env.development? || Rails.env.test?
+  if Rails.env.development? || Rails.env.production?
     config.storage = :file
   else
     config.fog_provider = 'fog/aws'
