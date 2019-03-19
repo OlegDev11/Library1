@@ -1,4 +1,4 @@
-if Rails.env.test? or Rails.env.development?
+if Rails.env.development? or Rails.env.production?
   CarrierWave.configure do |config|
     config.storage = :file
     config.root = "#{Rails.root}/tmp"
