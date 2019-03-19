@@ -17,14 +17,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 #Add gems
 gem 'twitter-bootstrap-rails'
-gem 'aws-sdk', '~> 2.3'
-gem 'figaro'
 gem 'simple_form'
 
 #for image
 gem 'carrierwave'
 gem 'fog-aws', require: 'fog/aws'
+gem 'aws-sdk', '~> 2.3'
 gem "mini_magick"
+gem 'figaro'
 
 gem 'devise', git: "https://github.com/plataformatec/devise"
 gem 'activeadmin'
@@ -35,7 +35,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg' 
+  gem 'pg'
 end
 
 group :development do
