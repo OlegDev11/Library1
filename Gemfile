@@ -21,10 +21,11 @@ gem 'simple_form'
 
 #for image
 gem 'carrierwave'
-gem 'fog-aws' 
+gem 'fog-aws', '~> 3.4.0'
 gem 'aws-sdk', '~> 2.3'
 gem "mini_magick"
 gem 'figaro'
+gem 'excon', '~> 0.62.0'
 
 gem 'devise', git: "https://github.com/plataformatec/devise"
 gem 'activeadmin'
