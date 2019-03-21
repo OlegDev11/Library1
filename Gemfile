@@ -21,7 +21,7 @@ gem 'simple_form'
 
 #for image
 gem 'carrierwave'
-gem 'fog-aws', require: 'fog/aws'
+gem 'fog-aws' 
 gem 'aws-sdk', '~> 2.3'
 gem "mini_magick"
 gem 'figaro'
