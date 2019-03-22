@@ -11,7 +11,7 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 # AWS configuration
-
+development:
 S3_HOST_NAME: 's3-us-east-1.amazonaws.com'
 S3_BUCKET: 'library1777'
 S3_REGION: 'us-east-1'
