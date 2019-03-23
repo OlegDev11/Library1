@@ -21,16 +21,6 @@
     <%= form.text_field :last_name %>
   </div>
 
-  <div class="field">
-    <%= form.label :book_id %>
-    <%= form.number_field :book_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :admin %>
-    <%= form.check_box :admin %>
-  </div>
-
 <% if current_user.present %>
   <div class="actions">
     <%= form.submit %>

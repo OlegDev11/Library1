@@ -1,5 +1,5 @@
 ActiveAdmin.register Group do
-  permit_params :name, books_attributes: [:id, :_destroy, :name]
+  permit_params :name, books_attributes: [:id, :_destroy, :name], book_ids: []
 
   actions :all
 
@@ -16,6 +16,7 @@ ActiveAdmin.register Group do
     form do |f|
         f.inputs "edit/group" do
            f.input :name
+           f.input :books, :as => :check_boxes
            f.has_many :books, heading: false, allow_destroy: true,  new_record: false do |book_form|
              book_form.input :name
            end
