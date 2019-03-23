@@ -14,6 +14,6 @@
 development:
 S3_HOST_NAME: 's3-us-east-1.amazonaws.com'
 S3_BUCKET: 'library1777'
-S3_REGION: 'us-east-1'
+S3_REGION: 'us-east-2'
 S3_ACCESS_KEY: 'AKIAIOREYL7VELF7ORTQ'
 S3_SECRET_KEY: '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'
