@@ -1,18 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Book name:</strong>
   <%= @book.name %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @book.avatar.url(:large), class: "img-show" if @book.avatar? %>   
+  <%= image_tag @book.avatar.url, width: '190px', height: '270px', class: "img-show" if @book.avatar? %>
 </p>
+
+  <p>
+    <strong>Description book:</strong>
+    <%= @book.description %>
+  </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @book.description %>
+  <strong>Author name:</strong>
+  <% @book.authors.each do |author| %>
+    <%= author.name %><br>
+  <% end %>
 </p>
 
-<%= link_to 'Back', books_path %>
+<%= link_to "Back", books_path, :class => 'btn btn-info' %>

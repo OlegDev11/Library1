@@ -13,10 +13,10 @@
 
   <body>
     <% if !current_user.present? %>
-      <span class="p-2 text-dark"><%= link_to "Registration", new_user_registration_path %></span> or
-      <span class="p-2 text-dark"><%= link_to "Sing in", new_user_session_path %></span> |
+      <span class="p-2 text-dark"><%= link_to "Registration", new_user_registration_path, :class => 'btn btn-success' %></span> or
+      <span class="p-2 text-dark"><%= link_to "Sing in", new_user_session_path, :class => 'btn btn-success' %></span> |
     <% end %>
-    <span class="p-2 text-dark"><%= link_to "Sing out", destroy_user_session_path, :method => :delete %></span>
+    <span class="p-2 text-dark"><%= link_to "Sing out", destroy_user_session_path, :class => 'btn btn-success', :method => :delete %></span>
      <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p>
 
