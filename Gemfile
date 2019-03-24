@@ -19,6 +19,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 
+gem 'rubocop', require: false
+
 #for image
 gem 'carrierwave'
 gem 'fog-aws', '~> 3.4.0'
