@@ -6,4 +6,5 @@ class Book < ApplicationRecord
 
    validates :name, :description, :avatar, presence: true
 
+   accepts_nested_attributes_for :authors, allow_destroy: true
 end

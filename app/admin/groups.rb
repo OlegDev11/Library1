@@ -17,13 +17,14 @@ ActiveAdmin.register Group do
         f.inputs "edit/group" do
            f.input :name
            f.input :books, :as => :check_boxes
+
+           actions
+        end
            f.has_many :books, heading: false, allow_destroy: true,  new_record: false do |book_form|
              book_form.input :name
            end
-           actions
-        end
-          f.actions do
-            f.action :submit, label: "Delete"
+            f.actions do
+             f.action :submit, label: "Delete"
           end
-    end
+     end
 end

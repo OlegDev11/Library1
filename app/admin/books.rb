@@ -1,6 +1,6 @@
 ActiveAdmin.register Book do
   actions :all
-  permit_params :name, :description, :avatar, group_ids: [], author_ids: []
+  permit_params :name, :description, :avatar, authors_attributes: [:id, :_destroy, :first_name, :last_name], group_ids: [], author_ids: []
 
 
   show do
@@ -24,13 +24,20 @@ ActiveAdmin.register Book do
   end
 
   form do |f|
-      f.inputs "update book" do
+    f.inputs "update book" do
       f.input :name
       f.input :authors, :as => :check_boxes
       f.input :description
       f.input :groups, :as => :check_boxes
       f.input :avatar
-     end
-     actions
+      
+       actions
+    end
+      f.has_many :authors, heading: false, allow_destroy: true,  new_record: false do |author_form|
+        author_form.input :name
+      end
+      f.actions do
+        f.action :submit, label: "Delete"
+      end
    end
 end
