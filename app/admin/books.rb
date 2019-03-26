@@ -30,7 +30,7 @@ ActiveAdmin.register Book do
       f.input :description
       f.input :groups, :as => :check_boxes
       f.input :avatar
-      
+
        actions
     end
       f.has_many :authors, heading: false, allow_destroy: true,  new_record: false do |author_form|
