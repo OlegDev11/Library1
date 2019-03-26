@@ -121,6 +121,7 @@ GEM
     commonjs (0.2.7)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    database_cleaner (1.7.0)
     dotenv (2.7.1)
     dotenv-rails (2.7.1)
       dotenv (= 2.7.1)
@@ -377,6 +378,7 @@ DEPENDENCIES
   carrierwave
   chromedriver-helper
   coffee-rails (~> 4.2)
+  database_cleaner (~> 1.7)
   devise!
   dotenv-rails
   excon (~> 0.62.0)

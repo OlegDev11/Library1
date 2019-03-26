@@ -19,6 +19,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 
+gem 'database_cleaner', '~> 1.7'
 gem 'rubocop', require: false
 
 #for image
